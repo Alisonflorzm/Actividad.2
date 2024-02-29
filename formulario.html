@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda sports</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    
+</head>
+<body>
+    <div class="content">
+        
+        <h1 class="logo">CUÉNTANOS <span>DE TI</span></h1>
+
+    <form id="cuentoFormulario">
+        <label for="nombre">Nombres y Apellidos:</label>
+        <input type="text" id="nombre" required>
+    
+        <label for="apodo">Apodo:</label>
+        <input type="text" id="apodo" required>
+    
+        <label for="colorCabello">Color de Cabello:</label>
+        <input type="text" id="colorCabello" required>
+    
+        <label for="colorOjos">Color de Ojos:</label>
+        <input type="text" id="colorOjos" required>
+    
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" required>
+    
+        <label for="hobby">Hobby:</label>
+        <input type="text" id="hobby" required>
+    
+        <input type="submit" value="Continuar">
+        
+        <a href="index.html">Inicio</a>
+        
+        
+    </form>
+    
+    <script>
+        document.getElementById("cuentoFormulario").onsubmit = function(event) {
+            event.preventDefault(); // Evitar que el formulario se envíe
+    
+            // Obtener los valores de los campos del formulario
+            const nombre = document.getElementById("nombre").value;
+            const apodo = document.getElementById("apodo").value;
+            const colorCabello = document.getElementById("colorCabello").value;
+            const colorOjos = document.getElementById("colorOjos").value;
+            const edad = document.getElementById("edad").value;
+            const hobby = document.getElementById("hobby").value;
+    
+            // Construir el cuento
+            const cuento = `Había una vez una persona llamada ${nombre} pero todos la conocían como ${apodo}. Tenía el cabello ${colorCabello} y unos ojos ${colorOjos} que parecían dos esmeraldas. Con tan solo ${edad} años, su pasatiempo favorito era ${hobby}. Un día, mientras realizaba su actividad favorita, sucedió algo extraordinario...`;
+    
+            // Mostrar el cuento en pantalla
+            alert(cuento);
+        };
+    </script>
+    
+    </body>
+    </html>
+    
+    
+</body>
+</html>
